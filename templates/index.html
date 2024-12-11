@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Comfortaa:wght@700&display=swap" rel="stylesheet">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link type="text/css" href="{{url_for('static', filename='css/index.css')}}" rel="stylesheet">
+    <title>Choose Ticket</title>
+</head>
+<body>
+    <div style="padding: 0 2vw; display: flex; justify-content: space-between;">
+        <div style="font-family: 'Comfortaa', cursive; color: black;">
+            <h3>Текущая ключевая ставка ЦБ: {{cb}}</h3>
+        </div>
+    </div>
+
+    <h1>На бирже сегодня лёгкий бриз!</h1>
+    <div class="tablo-block">
+        <table>
+            <tr>
+                {% for i in tablo %}
+                    <th>
+                        <a class="tablo-link" href="/ticket/{{i[0]}}">{{i[0]}}</a>
+                    </th>
+                {% endfor %}
+            </tr>
+            <tr>
+                {% for i in tablo %}
+                    <td>
+                        {{i[1]}}
+                    </td>
+                {% endfor %}
+            </tr>
+            <tr>
+                {% for i in tablo %}
+                    <td>
+                        {{i[2]}}
+                    </td>
+                {% endfor %}
+            </tr>
+        </table>
+    </div>
+
+    <div class="second-block">
+        <h2 class="green-text">Рекомендовано к покупке</h2>
+        <table>
+            <tr><th>Тикер</th><th>Последняя цена</th><th>%</th></tr>
+            {% for i in buy %}
+                <tr><td><a class="tablo-link" href="/ticket/{{i[0]}}">{{i[0]}}</a></td><td>{{i[1]}}</td><td>{{i[2]}}</td></tr>
+            {% endfor %}
+        </table>
+    </div>
+
+    <div class="second-block">
+        <h2 class="red-text">Рекомендовано к продаже</h2>
+        <table>
+            <tr><th>Тикер</th><th>Последняя цена</th><th>%</th></tr>
+            {% for i in sale %}
+                <tr><td><a class="tablo-link" href="/ticket/{{i[0]}}">{{i[0]}}</a></td><td>{{i[1]}}</td><td>{{i[2]}}</td></tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+
+<footer>
+    <span class="fot">
+        Разработчик: Лепёшкин Артём Дмитриевич<br>
+        E-mail: ArtLep1542@yandex.ru<br>
+        Телефон: 8(917)-536-71-41<br>
+        г. Москва<br>
+    </span>
+</footer>
+</html>
+
+
+
+
+
+
+
+
+

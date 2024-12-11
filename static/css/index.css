@@ -1,0 +1,118 @@
+body{
+   background-image: url("../Pictures/Backgrounds/main3.jpg");
+   background-repeat: no-repeat;
+
+    background-position: center center;
+
+    background-attachment: fixed;
+
+    -webkit-background-size: cover;
+
+    -moz-background-size: cover;
+
+    -o-background-size: cover;
+
+    background-size: cover;
+
+}
+
+h1{
+    padding-top: 70px;
+    text-align: center;
+    color: black;
+    font-size: 4vw;
+    font-weight: 500;
+    margin: 0;
+    margin-top: 50px;
+    font-family: 'Comfortaa', cursive;
+}
+
+.second-block{
+    text-align: center;
+
+    font-size: 3vw;
+    font-weight: 500;
+    margin: 0;
+    font-family: 'Comfortaa', cursive;
+}
+
+.red-text {
+    color: red;
+}
+
+.green-text {
+    color: green;
+}
+
+.second-block {
+    margin-top: 15vh;
+}
+
+.second-block table {
+    font-family: 'Times New Roman';
+    width: 60vw;
+    font-size: 2vw;
+    color: black;
+    border: solid black 1px;
+    margin-top: 5vh;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+}
+
+.second-block td {
+    text-align: center;
+    border: solid black 1px;
+    background-color: white;
+
+}
+
+.second-block th {
+    border: solid black 2px;
+    background-color: rgb(255, 160, 122)
+}
+
+footer {
+    margin-top: 4vh;
+    background-color: rgb(0, 0, 0, 0.5);
+    text-align: center;
+    font-size: 1.5vw;
+    font-family: 'Comfortaa' courcive;
+}
+.fot {
+    color: white;
+}
+
+
+asd {
+    text-decoration: none;
+}
+
+.tablo-block {
+    margin-top: 10vh;
+}
+
+.tablo-block table {
+    font-size: 1.7vw;
+    color: black;
+    border: solid black 1px;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+}
+
+.tablo-block td {
+    text-align: center;
+    border: solid black 1px;
+    background-color: white;
+}
+
+.tablo-block th {
+    border: solid black 2px;
+    background-color: rgb(255, 160, 122)
+}
+
+.tablo-link {
+    text-decoration: none;
+    color: black;
+}

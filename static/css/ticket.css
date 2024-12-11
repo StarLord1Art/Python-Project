@@ -1,0 +1,39 @@
+body{
+   background-image: url("../Pictures/Backgrounds/main3.jpg");
+   background-repeat: no-repeat;
+
+    background-position: center center;
+
+    background-attachment: fixed;
+
+    -webkit-background-size: cover;
+
+    -moz-background-size: cover;
+
+    -o-background-size: cover;
+
+    background-size: cover;
+
+}
+
+h2{
+    padding-top: 70px;
+    text-align: center;
+    color: black;
+    font-size: 4vw;
+    font-weight: 500;
+    margin: 0;
+    margin-top: 50px;
+    font-family: 'Comfortaa', cursive;
+}
+
+img{
+    display: block;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img-plot {
+    margin-top: 4vh;
+}
