@@ -20,8 +20,7 @@ d100 = pd.read_csv("static/csv/d100.csv")
 def save_plot_by_name(name):  # Создание графика цен
     fig = plt.figure(figsize=(12, 5))
     plt.plot([i for i in range(len(d100[name]))], d100[name])
-    plt.fill_between([i for i in range(len(d100[name]))], d100[name])
-    plt.legend()
+    plt.legend(["Цена, $"])
     plt.title(name)
     plt.savefig(f"static/Pictures/temp/{name}.png")
 
@@ -41,12 +40,9 @@ def save_predict_by_name(name):  # Создание графика предск�
     fig = plt.figure(figsize=(12, 5))
     plt.plot(
         [i for i in range(len(d100[name]))],
-        d100[name][10:70].to_list() + predict(d100[name][70:], 10),
+        d100[name][10:70].to_list() + predict(d100[name][70:], 10)
     )
-    plt.fill_between([i for i in range(90)], d100[name][10:].to_list())
-    plt.fill_between(
-        [i for i in range(89, 100)], predict(d100[name][70:], 10)[-11:], color="red"
-    )
-    plt.legend()
+    plt.plot([i for i in range(89, len(d100[name]))], predict(d100[name][70:], 10)[-11:])
+    plt.legend(["Цена, $", "Прогноз цены, $"])
     plt.title(name)
     plt.savefig(f"static/Pictures/temp/{name}1.png")
